@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1= title
+
+  a(href="/users/new") 添加新用户
+
+  each item in list
+    li 
+     a(href="/users/" + item.username) #{item.username} is a #{item.bio}

@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1= title
+
+  a(href="/users") 用户列表
+
+  p= user.username
+  p= user.bio
+
+  form(action="/users/delete/" + user.id, method="post")
+    input(type="submit", value="Delete")

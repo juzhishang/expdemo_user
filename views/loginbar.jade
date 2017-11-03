@@ -1,0 +1,14 @@
+- if (session.user) {
+    p
+      span hello&nbsp;
+      span= session.user.name
+      span !!
+
+    p
+      form(method="post", action="/session/logout")
+        input(type="hidden", value="Loginout")
+        input(type="submit", value="logout")
+- } else {
+    p
+      a(href="/session/login") login
+- }

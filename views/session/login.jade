@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+
+  h1= title
+
+
+  form(method="post", action="/session/login")
+    p
+      label(for="username") 用户名
+      input#username(name="username")
+
+    p
+      label(for="password") 密码
+      input#password(name="password", type="password")
+
+    p
+      input(type="submit", value="login")
